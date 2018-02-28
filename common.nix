@@ -47,9 +47,4 @@
   nixpkgs.config.allowUnfree = true;
 
   time.timeZone = "Europe/Helsinki";
-
-  services.xserver.layout = "us";
-  services.xserver.xkbVariant = "colemak";
-  services.xserver.xkbOptions = "eurosign:e,caps:backspace,nbsp:none";
-
 }
