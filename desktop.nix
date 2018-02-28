@@ -21,13 +21,10 @@
 
   programs.zsh.enable = true;
   programs.zsh.syntaxHighlighting.enable = true;
-  #programs.zsh.syntaxHighlighting.highlighters = [
-  #  main
-  #  brackets
-  #  cursor
-  #  root
-  #  line
-  #];
+  programs.zsh.syntaxHighlighting.highlighters = [
+    # "main"
+    "brackets"
+  ];
   programs.zsh.shellInit = ''
     unsetopt share_history
     bindkey -e
