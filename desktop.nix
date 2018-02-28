@@ -1,6 +1,15 @@
 { config, pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    atom
+    chromium
+    firefox
+    gimp
+    inkscape
+    vlc
+  ];
+
   networking.firewall.enable = true;
   networking.firewall.trustedInterfaces = [
     "docker0"
@@ -50,6 +59,12 @@
     ];
   };
 
+  services.redshift = {
+    enable = true;
+    latitude = "62.14";
+    longitude = "25.44";
+  };
+
   services.xserver.enable = true;
   services.xserver.layout = "us";
   services.xserver.xkbVariant = "colemak";
@@ -60,6 +75,11 @@
   services.xserver.desktopManager.gnome3.enable = true;
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.windowManager.i3.enable = true;
+
+#  services.xserver.desktopManager.gnome3.extraGSettingsOverrides = ''
+#    [/org/gnome/desktop/peripherals/touchpad]
+#    send-events='disabled'
+#  '';
 
   system.autoUpgrade.enable = true;
 

@@ -10,15 +10,28 @@
   #  (import "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/master.tar.gz}/overlay.nix")
   #];
 
+  environment.extraInit = ''
+    export EDITOR=nano
+  '';
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
+    atop
     elinks
     gitFull
+    gnumake
+    gnupg
+    htop
+    imagemagick
+    jq
     nano
+    pass
     tmux
+    unzip
     vim
     wget
+    zip
     #home-manager
   ];
 
@@ -45,6 +58,9 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   nixpkgs.config.allowUnfree = true;
+
+  programs.ssh.agentTimeout = "12h";
+  programs.ssh.startAgent = true;
 
   time.timeZone = "Europe/Helsinki";
 }
