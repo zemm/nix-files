@@ -24,17 +24,18 @@ Setup local `/etc/nixos/configuration.nix` so that it:
     ./hardware-configuration.nix
     ./nix-files/hardware-....nix
     ./nix-files/common.nix
-    ... others based on the role ...
+    # Other imports as needed based on the role of the machine
   ];
 
-  # Optional boot-stuff
+  # boot... = ...               # Installation specific
 
-  networking.hostName = ...
+  # networking.hostName = ...
 
-  # Optional or private services/programs
+  # programs... = ...           # Optional machine specific one-offs
+  # services... = ...
 
-  users.users.... = ...
+  # users.users.... = ...       # Maybe semi-private in some cases
 
-  system.stateVersion = ...
+  # system.stateVersion = ...
 }
 ```
