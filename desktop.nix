@@ -73,13 +73,20 @@
   services.xserver.desktopManager.default = "gnome3";
   services.xserver.desktopManager.xterm.enable = false;
   services.xserver.desktopManager.gnome3.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
   services.xserver.windowManager.i3.enable = true;
 
 #  services.xserver.desktopManager.gnome3.extraGSettingsOverrides = ''
 #    [/org/gnome/desktop/peripherals/touchpad]
 #    send-events='disabled'
 #  '';
+
+  system.activationScripts.etcX11sessions = ''
+    echo "setting up /etc/X11/sessions..."
+    mkdir -p /etc/X11
+    [[ ! -L /etc/X11/sessions ]] || rm /etc/X11/sessions
+    ln -sf ${config.services.xserver.displayManager.session.desktops} /etc/X11/sessions
+  '';
 
   system.autoUpgrade.enable = true;
 
