@@ -71,8 +71,9 @@
   services.xserver.xkbOptions = "eurosign:e,caps:backspace,nbsp:none";
 
   services.xserver.desktopManager.default = "gnome3";
-  services.xserver.desktopManager.xterm.enable = false;
   services.xserver.desktopManager.gnome3.enable = true;
+  services.xserver.desktopManager.xfce.enable = true;
+  services.xserver.desktopManager.xterm.enable = false;
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.windowManager.i3.enable = true;
 
