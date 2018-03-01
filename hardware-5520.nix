@@ -3,10 +3,11 @@
 {
   # hardware.bluetooth.enable = true;
 
-  hardware.bumblebee = {
-    enable = true;
-    connectDisplay = true;
-  };
+  hardware.bumblebee.enable = false;
+  #hardware.bumblebee = {
+  #  enable = true;
+  #  connectDisplay = true;
+  #};
 
   services.xserver.libinput = {
     enable = true;
