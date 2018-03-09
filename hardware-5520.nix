@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # hardware.bluetooth.enable = true;
 
   hardware.bumblebee.enable = false;
@@ -22,6 +24,8 @@
       Option "SendEventsMode" "disabled-on-external-mouse"
     '';
   };
+
+  # services.xserver.displayManager.gdm.wayland = false; # problems with nvidia?
 
   services.xserver.videoDrivers = [
   #  "nvidia"
