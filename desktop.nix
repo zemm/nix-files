@@ -72,16 +72,20 @@
 
   services.xserver.desktopManager.default = "gnome3";
   services.xserver.desktopManager.gnome3.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
+  # services.xserver.desktopManager.xfce.enable = true;
   services.xserver.desktopManager.xterm.enable = false;
+
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.windowManager.i3.enable = true;
+
+  # services.xserver.windowManager.i3.enable = true;
 
 #  services.xserver.desktopManager.gnome3.extraGSettingsOverrides = ''
 #    [/org/gnome/desktop/peripherals/touchpad]
 #    send-events='disabled'
 #  '';
 
+  # Temporary fix for session list not showing in gdm
+  # https://github.com/NixOS/nixpkgs/issues/34101
   system.activationScripts.etcX11sessions = ''
     echo "setting up /etc/X11/sessions..."
     mkdir -p /etc/X11
