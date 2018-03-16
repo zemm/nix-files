@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     atom
     chromium
+    elmPackages.elm
     firefox
     gimp
     inkscape
