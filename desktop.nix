@@ -9,6 +9,7 @@
     gimp
     i3lock-fancy
     inkscape
+    pmutils
     steam
     steam-run
     # vlc
