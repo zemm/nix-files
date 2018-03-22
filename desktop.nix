@@ -2,13 +2,15 @@
 
 {
   environment.systemPackages = with pkgs; [
-    atom
+    # atom
     chromium
     elmPackages.elm
     firefox
     gimp
     inkscape
-    vlc
+    steam
+    steam-run
+    # vlc
   ];
 
   networking.firewall.enable = true;

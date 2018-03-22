@@ -24,7 +24,9 @@ Setup local `/etc/nixos/configuration.nix` so that it:
     ./hardware-configuration.nix
     ./nix-files/hardware-....nix
     ./nix-files/common.nix
-    # Other imports as needed based on the role of the machine
+    # Optional based on the role of the machine
+    ./nix-files/desktop.nix
+    ./nix-files/user.nix
   ];
 
   # boot... = ...               # Installation specific
@@ -32,9 +34,14 @@ Setup local `/etc/nixos/configuration.nix` so that it:
   # networking.hostName = ...
 
   # programs... = ...           # Optional machine specific one-offs
+
+  # services.openssh.enabled = true;
   # services... = ...
 
-  # users.users.... = ...       # Maybe semi-private in some cases
+  # Can vary on different machines
+  myuser.username = "zemm";
+  myuser.uid = 100;
+  myuser.shell = "/run/current-system/sw/bin/zsh";
 
   # system.stateVersion = ...
 }
