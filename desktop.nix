@@ -7,6 +7,7 @@
     elmPackages.elm
     firefox
     gimp
+    i3lock-fancy
     inkscape
     steam
     steam-run
@@ -75,6 +76,12 @@
   services.xserver.displayManager.gdm.enable = true;
 
   services.xserver.windowManager.i3.enable = true;
+  #services.xserver.windowManager.i3.extraPackages = with pkgs; [
+  #  i3lock-fancy
+  #];
+  services.xserver.windowManager.i3.extraSessionCommands = ''
+    xset r rate 250 32
+  '';
 
 #  services.xserver.desktopManager.gnome3.extraGSettingsOverrides = ''
 #    [/org/gnome/desktop/peripherals/touchpad]
