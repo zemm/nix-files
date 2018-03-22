@@ -87,6 +87,8 @@
 #    send-events='disabled'
 #  '';
 
+  sound.mediaKeys.enable = true;
+
   # Temporary fix for session list not showing in gdm
   # https://github.com/NixOS/nixpkgs/issues/34101
   system.activationScripts.etcX11sessions = ''
