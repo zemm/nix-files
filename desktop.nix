@@ -80,7 +80,7 @@
 
   services.xserver.displayManager.gdm.enable = true;
 
-  # services.xserver.windowManager.i3.enable = true;
+  services.xserver.windowManager.i3.enable = true;
 
 #  services.xserver.desktopManager.gnome3.extraGSettingsOverrides = ''
 #    [/org/gnome/desktop/peripherals/touchpad]
