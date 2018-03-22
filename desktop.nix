@@ -23,12 +23,6 @@
 
   programs.bash.enableCompletion = true;
 
-  # @TODO
-  #programs.gnupg.agent = {
-  #  enable = true;
-  #  enableSSHSupport = true;
-  #};
-
   programs.mtr.enable = true;
 
   programs.zsh.enable = true;

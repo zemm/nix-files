@@ -62,5 +62,11 @@
   programs.ssh.agentTimeout = "12h";
   programs.ssh.startAgent = true;
 
+  # @TODO
+  #programs.gnupg.agent = {
+  #  enable = true;
+  #  enableSSHSupport = true;
+  #};
+
   time.timeZone = "Europe/Helsinki";
 }
