@@ -31,4 +31,8 @@
   #  "nvidia"
     "intel"
   ];
+
+  services.xserver.windowManager.i3.extraSessionCommands = ''
+    xset r rate 250 32
+  '';
 }

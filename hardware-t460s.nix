@@ -35,4 +35,11 @@
   services.xserver.videoDrivers = [
     "intel"
   ];
+
+  services.xserver.windowManager.i3.extraSessionCommands = ''
+    xset r rate 250 32
+    xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
+    xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Profile Enabled" 0, 1
+    xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" 0.8
+  '';
 }
