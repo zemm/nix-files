@@ -40,6 +40,8 @@
 
   security.chromiumSuidSandbox.enable = true;
 
+  services.illum.enable = true;
+
   #services.mopidy = { # @TODO
   #  enable = true;
   #  extensionPackages = with pkgs; [
