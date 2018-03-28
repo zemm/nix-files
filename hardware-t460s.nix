@@ -31,6 +31,11 @@
   services.tlp.enable = true; # TLP Linux Advanced Power Management
 
   services.xserver.libinput.enable = true;
+  services.xserver.libinput.accelSpeed = "0.3";
+  services.xserver.libinput.naturalScrolling = true;
+  services.xserver.libinput.clickMethod = "clickfinger";
+  services.xserver.libinput.tapping = true;
+  services.xserver.libinput.tappingDragLock = true;
 
   services.xserver.videoDrivers = [
     "intel"
@@ -38,8 +43,8 @@
 
   services.xserver.windowManager.i3.extraSessionCommands = ''
     xset r rate 250 32
-    xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
     xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Profile Enabled" 0, 1
     xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" 0.8
   '';
+  #xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
 }
