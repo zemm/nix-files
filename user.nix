@@ -18,6 +18,14 @@ with lib;
       type = types.str;
       default = "/run/current-user/sw/bin/zsh";
     };
+    packages = mkOption {
+      type = types.listOf types.package;
+      default = [
+        pkgs.steam
+        pkgs.atom
+        pkgs.vlc
+      ];
+    };
   };
 
   config = {
@@ -36,11 +44,7 @@ with lib;
           "vboxusers"
           "docker"
         ];
-        packages = with pkgs; [
-          steam
-          atom
-          vlc
-        ];
+        packages = config.myuser.packages;
       };
     }]);
   };
