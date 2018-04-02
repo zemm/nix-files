@@ -25,12 +25,12 @@
     libvdpau-va-gl
   ];
 
-  hardware.trackpoint = {
-    enable = true;
-    emulateWheel = true;
-    #speed = 250;
-    #sensitivity = 140;
-  };
+  #hardware.trackpoint = {
+  #  enable = true;
+  #  emulateWheel = true;
+  #  #speed = 250;
+  #  #sensitivity = 140;
+  #};
 
   # https://github.com/NixOS/nixos-hardware/blob/5a00ea423a39b66dff032a03973932ab4f18af91/common/pc/laptop/default.nix
   powerManagement.cpuFreqGovernor =
