@@ -5,6 +5,7 @@
     # atom
     chromium
     elmPackages.elm
+    feh
     firefox
     gimp
     i3lock-fancy
