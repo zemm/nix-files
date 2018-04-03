@@ -43,6 +43,7 @@
     cantarell_fonts
     corefonts
     dejavu_fonts
+    font-awesome-ttf
     gentium
     inconsolata
     liberation_ttf
