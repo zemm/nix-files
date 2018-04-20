@@ -11,6 +11,17 @@
   #  connectDisplay = true;
   #};
 
+  services.acpid.enable = true;
+  services.acpid.lidEventCommands = "systemctl suspend";
+  services.acpid.powerEventCommands = "systemctl suspend";
+
+  services.logind.extraConfig = ''
+    HandlePowerKey=ignore
+    HandleSuspendKey=ignore
+    HandleHibernateKey=ignore
+    HandleLidSwitch=ignore
+  '';
+
   services.xserver.libinput = {
     enable = true;
     accelProfile = "adaptive";
