@@ -13,6 +13,7 @@
     # pmutils
     # steam
     # steam-run
+    vagrant
     # vlc
   ];
 
