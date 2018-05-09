@@ -10,6 +10,7 @@
     gimp
     i3lock-fancy
     inkscape
+    libevdev
     # pmutils
     # steam
     # steam-run
