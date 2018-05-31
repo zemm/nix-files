@@ -31,9 +31,9 @@
     tappingDragLock = false;
     naturalScrolling = true;
     disableWhileTyping = true;
-    additionalOptions = ''
-      Option "SendEventsMode" "disabled-on-external-mouse"
-    '';
+    # additionalOptions = ''
+    #   Option "SendEventsMode" "disabled-on-external-mouse"
+    # '';
   };
 
   # services.xserver.displayManager.gdm.wayland = false; # problems with nvidia?

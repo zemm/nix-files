@@ -15,7 +15,8 @@
     # steam
     # steam-run
     vagrant
-    # vlc
+    vlc
+    xorg.xev
   ];
 
   networking.firewall.enable = true;
@@ -85,6 +86,39 @@
   #services.xserver.windowManager.i3.extraPackages = with pkgs; [
   #  i3lock-fancy
   #];
+
+#  services.xserver.inputClassSections = [
+#    ''
+#      Identifier "Trackball Wheel Emulation"
+#      MatchProduct "Kensington      Kensington Expert Mouse"
+#      #MatchDevicePath "/dev/input/event1"
+#      #MatchProduct "Kensington Expert Mouse"
+#
+#      #Option "EmulateWheel" "true"
+#      #Option "EmulateWheelButton" "8"
+#
+#      # https://gist.github.com/DamienCassou/e1e6b3746789276b7b25
+#      # Make it work for both vertical and horizontal scroll
+#      #Option "XAxisMapping" "6 7"
+#      #Option "YAxisMapping" "4 5"
+#      # Remap the buttons a little bit, since firefox will use
+#      # button 8 as back button and that's not what I want
+#      #Option "ButtonMapping" "1 8 3 4 5 6 7 10 9 2 11 12"
+#
+#      Driver "evdev"
+#
+#      # https://fransdejonge.com/2016/05/xorg-conf-emulatewheel-stopped-working-on-libinput-update/
+#      Option "SendCoreEvents" "True"
+#      #Option "ButtonMapping" "0 1 2 4 5 6 7 3"
+#      Option "ScrollMethod" "button"
+#      Option "ScrollButton "8"
+#    ''
+#  ];
+
+  services.xserver.displayManager.sessionCommands = ''
+    export TERMINAL=gnome-terminal
+    xset r rate 250 32
+  '';
 
 #  services.xserver.desktopManager.gnome3.extraGSettingsOverrides = ''
 #    [/org/gnome/desktop/peripherals/touchpad]
