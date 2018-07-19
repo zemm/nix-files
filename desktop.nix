@@ -11,6 +11,7 @@
     i3lock-fancy
     inkscape
     libevdev
+    libreoffice
     # pmutils
     # steam
     # steam-run
