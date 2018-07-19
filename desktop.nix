@@ -134,12 +134,12 @@
 
   # Temporary fix for session list not showing in gdm
   # https://github.com/NixOS/nixpkgs/issues/34101
-  system.activationScripts.etcX11sessions = ''
-    echo "setting up /etc/X11/sessions..."
-    mkdir -p /etc/X11
-    [[ ! -L /etc/X11/sessions ]] || rm /etc/X11/sessions
-    ln -sf ${config.services.xserver.displayManager.session.desktops} /etc/X11/sessions
-  '';
+#  system.activationScripts.etcX11sessions = ''
+#    echo "setting up /etc/X11/sessions..."
+#    mkdir -p /etc/X11
+#    [[ ! -L /etc/X11/sessions ]] || rm /etc/X11/sessions
+#    ln -sf ${config.services.xserver.displayManager.session.desktops} /etc/X11/sessions
+#  '';
 
   system.autoUpgrade.enable = true;
 
