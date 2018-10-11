@@ -79,6 +79,8 @@
   services.xserver.layout = "us";
   services.xserver.xkbVariant = "colemak";
   services.xserver.xkbOptions = "eurosign:e,caps:backspace,nbsp:none";
+  services.xserver.autoRepeatDelay = 230;
+  services.xserver.autoRepeatInterval = 32;
 
   services.xserver.desktopManager.default = "gnome3";
   services.xserver.desktopManager.gnome3.enable = lib.mkDefault true;
@@ -122,7 +124,7 @@
 
   services.xserver.displayManager.sessionCommands = ''
     export TERMINAL=gnome-terminal
-    xset r rate 250 32
+    xset r rate 230 32
   '';
 
 #  services.xserver.desktopManager.gnome3.extraGSettingsOverrides = ''
