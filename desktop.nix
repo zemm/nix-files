@@ -81,13 +81,13 @@
   services.xserver.autoRepeatDelay = 230;
   services.xserver.autoRepeatInterval = 32;
 
-  # services.xserver.desktopManager.default = "gnome3";
+  services.xserver.desktopManager.default = "none";
   services.xserver.desktopManager.gnome3.enable = lib.mkDefault true;
-  # services.xserver.desktopManager.xfce.enable = true;
   services.xserver.desktopManager.xterm.enable = false;
 
   services.xserver.displayManager.gdm.enable = true;
 
+  services.xserver.windowManager.default = lib.mkDefault "i3";
   services.xserver.windowManager.i3.enable = lib.mkDefault true;
   #services.xserver.windowManager.i3.extraPackages = with pkgs; [
   #  i3lock-fancy
