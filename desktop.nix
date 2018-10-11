@@ -2,19 +2,29 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # atom
+    atom
+    autorandr
     chromium
-    elmPackages.elm
+    docker_compose
+    evtest
     feh
     firefox
+    ghostscript
     gimp
+    gparted
     i3lock-fancy
     inkscape
+    iotop
     libevdev
     libreoffice
+    lm_sensors
+    openldap
+    openssl
+    pavucontrol
     # pmutils
-    # steam
-    # steam-run
+    scrot
+    shutter
+    usbutils
     vagrant
     vlc
     xorg.xev

@@ -20,10 +20,7 @@ with lib;
     };
     packages = mkOption {
       type = types.listOf types.package;
-      default = [
-        pkgs.steam
-        pkgs.atom
-        pkgs.vlc
+      default = with pkgs; [
       ];
     };
   };
