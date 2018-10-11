@@ -15,8 +15,8 @@ with lib;
       default = "";
     };
     shell = mkOption {
-      type = types.str;
-      default = "/run/current-user/sw/bin/zsh";
+      type = types.either types.shellPackage types.path;
+      default = pkgs.zsh;
     };
     packages = mkOption {
       type = types.listOf types.package;

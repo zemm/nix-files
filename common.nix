@@ -71,5 +71,22 @@
   #  enableSSHSupport = true;
   #};
 
+  programs.zsh.enable = true;
+  programs.zsh.syntaxHighlighting.enable = true;
+  programs.zsh.syntaxHighlighting.highlighters = [
+    # "main"
+    "brackets"
+  ];
+  programs.zsh.interactiveShellInit = ''
+    # TODO: programs.zsh.interactiveShellInit
+  '';
+  programs.zsh.loginShellInit = ''
+    # TODO: programs.zsh.loginShellInit
+  '';
+  programs.zsh.shellInit = ''
+    unsetopt share_history
+    bindkey -e
+  '';
+
   time.timeZone = "Europe/Helsinki";
 }

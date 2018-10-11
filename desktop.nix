@@ -42,17 +42,6 @@
 
   programs.mtr.enable = true;
 
-  programs.zsh.enable = true;
-  programs.zsh.syntaxHighlighting.enable = true;
-  programs.zsh.syntaxHighlighting.highlighters = [
-    # "main"
-    "brackets"
-  ];
-  programs.zsh.shellInit = ''
-    unsetopt share_history
-    bindkey -e
-  '';
-
   security.chromiumSuidSandbox.enable = true;
 
   services.illum.enable = true;
