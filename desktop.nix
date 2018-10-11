@@ -82,7 +82,7 @@
   services.xserver.autoRepeatDelay = 230;
   services.xserver.autoRepeatInterval = 32;
 
-  services.xserver.desktopManager.default = "gnome3";
+  # services.xserver.desktopManager.default = "gnome3";
   services.xserver.desktopManager.gnome3.enable = lib.mkDefault true;
   # services.xserver.desktopManager.xfce.enable = true;
   services.xserver.desktopManager.xterm.enable = false;

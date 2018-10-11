@@ -46,4 +46,9 @@
   services.xserver.windowManager.i3.extraSessionCommands = ''
     xset r rate 250 32
   '';
+
+  #swapDevices = [{
+  #  device = "/var/swapfile";
+  #  size = 8192;
+  #}];
 }
