@@ -46,6 +46,7 @@
     corefonts
     dejavu_fonts
     font-awesome-ttf
+    font-awesome_5
     gentium
     inconsolata
     liberation_ttf
