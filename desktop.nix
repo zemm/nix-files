@@ -21,6 +21,7 @@
     openldap
     openssl
     pavucontrol
+    polybar
     # pmutils
     scrot
     shutter
