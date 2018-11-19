@@ -69,6 +69,8 @@
   services.avahi.enable = true;
   services.avahi.nssmdns = true;
 
+  services.gnome3.gnome-keyring.enable = true;
+
   services.redshift = {
     enable = true;
     latitude = "62.14";
