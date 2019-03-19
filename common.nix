@@ -57,7 +57,8 @@
   ];
 
   i18n.consoleFont = "Lat2-Terminus16";
-  i18n.consoleKeyMap = "colemak/en-latin9";
+  #i18n.consoleKeyMap = "colemak/en-latin9";
+  i18n.consoleKeyMap = "colemak";
   #i18n.defaultLocale = "fi_FI.UTF-8";
   i18n.defaultLocale = "en_US.UTF-8";
 
