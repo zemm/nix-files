@@ -9,8 +9,10 @@
     evtest
     feh
     firefox
+    fwupd
     ghostscript
     gimp
+    gnome3.gnome-bluetooth
     gparted
     i3lock-fancy
     inkscape
@@ -25,12 +27,27 @@
     # pmutils
     scrot
     shutter
+    udftools
     usbutils
     vagrant
     vlc
+    vscode
     xorg.xev
     xclip
   ];
+
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  #hardware.bluetooth.extraConfig = "
+  #  [General]
+  #  Enable=Source,Sink,Media,Socket
+  #";
+
+  hardware.pulseaudio = {
+    enable = true;
+    #extraModules = [ pkgs.pulseaudio-modules-bt ];
+    package = pkgs.pulseaudioFull;
+  };
 
   networking.firewall.enable = true;
   networking.firewall.trustedInterfaces = [
