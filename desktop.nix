@@ -14,7 +14,9 @@
     gimp
     gnome3.gnome-bluetooth
     gparted
+    i3lock-color
     i3lock-fancy
+    i3lock-pixeled
     inkscape
     iotop
     libevdev
@@ -31,9 +33,11 @@
     usbutils
     vagrant
     vlc
+    volumeicon
     vscode
-    xorg.xev
+    xautolock
     xclip
+    xorg.xev
   ];
 
   hardware.bluetooth.enable = true;
