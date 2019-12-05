@@ -95,9 +95,9 @@
 
   services.redshift = {
     enable = true;
-    latitude = "62.14";
-    longitude = "25.44";
   };
+  location.latitude = 62.14;
+  location.longitude = 25.44;
 
   services.xserver.enable = true;
   services.xserver.layout = "us";
