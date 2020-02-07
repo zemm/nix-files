@@ -38,6 +38,8 @@ with lib;
           "video"
           "networkmanager"
           "input"
+          "libvirtd"
+	  "qemu-libvirtd"
           "vboxusers"
           "docker"
         ];

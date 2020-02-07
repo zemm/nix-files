@@ -27,11 +27,13 @@
     pavucontrol
     polybar
     # pmutils
+    qemu_kvm
     scrot
     shutter
     udftools
     usbutils
     vagrant
+    virtmanager
     vlc
     volumeicon
     vscode
@@ -56,7 +58,11 @@
   networking.firewall.enable = true;
   networking.firewall.trustedInterfaces = [
     "docker0"
-    "vboxnet0"
+    #"vboxnet1"
+    "virbr0"
+    "virbr1"
+    "virbr2"
+    "virbr3"
   ];
 
   networking.networkmanager.enable = true;
@@ -170,5 +176,6 @@
   system.autoUpgrade.enable = true;
 
   virtualisation.docker.enable = true;
-  virtualisation.virtualbox.host.enable = true;
+  #virtualisation.virtualbox.host.enable = true;
+  virtualisation.libvirtd.enable = true;
 }
