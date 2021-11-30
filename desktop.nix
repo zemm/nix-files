@@ -4,8 +4,9 @@
   environment.systemPackages = with pkgs; [
     atom
     autorandr
+    blueman
     chromium
-    docker_compose
+    #docker_compose
     evtest
     feh
     firefox
@@ -48,10 +49,14 @@
   #  [General]
   #  Enable=Source,Sink,Media,Socket
   #";
+  hardware.bluetooth.settings.General = {
+    Enable = "Source,Sink,Media,Socket";
+  };
+  services.blueman.enable = true;
 
   hardware.pulseaudio = {
     enable = true;
-    #extraModules = [ pkgs.pulseaudio-modules-bt ];
+    extraModules = [ pkgs.pulseaudio-modules-bt ];
     package = pkgs.pulseaudioFull;
   };
 
@@ -68,7 +73,7 @@
   networking.networkmanager.enable = true;
 
   programs.bash.enableCompletion = true;
-
+  programs.gnupg.agent.enable = true;
   programs.mtr.enable = true;
 
   security.chromiumSuidSandbox.enable = true;
@@ -156,7 +161,7 @@
 
   services.xserver.displayManager.sessionCommands = ''
     export TERMINAL=gnome-terminal
-    xset r rate 230 32
+    xset r rate 220 40
   '';
 
 #  services.xserver.desktopManager.gnome3.extraGSettingsOverrides = ''
@@ -177,7 +182,13 @@
 
   system.autoUpgrade.enable = true;
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker.enable = false;
+  #virtualisation.docker.storageDriver = "overlay";
+
+  virtualisation.podman.enable = true;
+  virtualisation.podman.dockerCompat = true;
+
   #virtualisation.virtualbox.host.enable = true;
+
   virtualisation.libvirtd.enable = true;
 }
