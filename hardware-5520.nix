@@ -22,13 +22,14 @@
     HandleLidSwitch=ignore
   '';
 
-  services.xserver.libinput = {
-    enable = true;
+  services.xserver.libinput.enable = true;
+  services.xserver.libinput.touchpad = {
     accelProfile = "adaptive";
     accelSpeed = "0.7";
     scrollMethod = "twofinger";
     tapping = false;
     tappingDragLock = false;
+    clickMethodEnabled = "clickfinger";
     naturalScrolling = true;
     disableWhileTyping = true;
     # additionalOptions = ''
