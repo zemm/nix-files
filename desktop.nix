@@ -97,7 +97,7 @@
   services.avahi.enable = true;
   services.avahi.nssmdns = true;
 
-  services.gnome3.gnome-keyring.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   services.redshift = {
     enable = true;
@@ -112,17 +112,19 @@
   services.xserver.autoRepeatDelay = 230;
   services.xserver.autoRepeatInterval = 32;
 
-  services.xserver.desktopManager.default = "none";
-  services.xserver.desktopManager.gnome3.enable = lib.mkDefault true;
+  #services.xserver.desktopManager.default = "none";
+  services.xserver.desktopManager.gnome.enable = lib.mkDefault true;
   services.xserver.desktopManager.xterm.enable = false;
 
   services.xserver.displayManager.gdm.enable = true;
 
-  services.xserver.windowManager.default = lib.mkDefault "i3";
+  #services.xserver.windowManager.default = lib.mkDefault "i3";
   services.xserver.windowManager.i3.enable = lib.mkDefault true;
   #services.xserver.windowManager.i3.extraPackages = with pkgs; [
   #  i3lock-fancy
   #];
+
+  services.xserver.displayManager.defaultSession = "none+i3";
 
 #  services.xserver.inputClassSections = [
 #    ''
