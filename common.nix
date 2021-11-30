@@ -37,8 +37,7 @@
     #home-manager
   ];
 
-  fonts.enableFontDir = true;
-  fonts.enableCoreFonts = true;
+  fonts.fontDir.enable = true;
   fonts.enableGhostscriptFonts = true;
   fonts.fonts = with pkgs; [
     bakoma_ttf
@@ -56,9 +55,11 @@
     ubuntu_font_family
   ];
 
-  i18n.consoleFont = "Lat2-Terminus16";
+  #i18n.consoleFont = "Lat2-Terminus16";
+  console.font = "Lat2-Terminus16";
   #i18n.consoleKeyMap = "colemak/en-latin9";
-  i18n.consoleKeyMap = "colemak";
+  #i18n.consoleKeyMap = "colemak";
+  console.keyMap = "colemak";
   #i18n.defaultLocale = "fi_FI.UTF-8";
   i18n.defaultLocale = "en_US.UTF-8";
 
