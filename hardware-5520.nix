@@ -29,7 +29,7 @@
     scrollMethod = "twofinger";
     tapping = false;
     tappingDragLock = false;
-    clickMethodEnabled = "clickfinger";
+    clickMethod = "clickfinger";
     naturalScrolling = true;
     disableWhileTyping = true;
     # additionalOptions = ''
